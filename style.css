@@ -45,8 +45,8 @@
 .logo-img{
     padding: 0;
    
-    width: 5vw;
-    height: 5vw;
+    width: 100px ;
+    height: 100px;
     margin: 14px 0 7px 0;
     border-radius: 50%;
     opacity: 0;
@@ -210,8 +210,7 @@ opacity: 1;
   position: relative;
   background-image: linear-gradient(180deg,rgba(0, 51, 65, 0.8),rgba(1, 37, 48, 0.8)),url(https://images2.alphacoders.com/822/thumb-1920-82262.jpg);
   background-repeat: no-repeat;
-  /* clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%); */
-  /* opacity: 0.8; */
+  
   background-position: center;
   background-size: cover;
    
@@ -220,6 +219,8 @@ opacity: 1;
   top: 0;
   left: 78px;
   width: calc(100% - 78px);
+  /* left: 0; */
+  width: 100%;
   transition: all 0.5s ease;
 
 }
@@ -250,11 +251,12 @@ opacity: 1;
 }
 .home-section .text{
   display: inline-block;
-  /* color: #11101d; */
+  
   color: #fff;
   font-size: 25px;
   font-weight: 500;
-  margin: 18px
+  margin: 18px 0px;
+  
 }
 @media (max-width: 420px) {
   .sidebar li .tooltip{
@@ -297,8 +299,9 @@ transform: translate(-50%, -50%);
 
 
 .container {
+  
   top: 50rem;
-  left: 20%;
+  left: 17vw;
   max-width: 950px;
   width: 100%;
   overflow: hidden;
@@ -312,7 +315,7 @@ body::before {
   content: '';
   position: absolute;
   width: 100%;
-  /* background:rgba(0,67,86,.8); */
+
   background: rgba(0,67,86,.8);
   clip-path: inset(47% 0 0 0);
   z-index: -1;
@@ -488,7 +491,9 @@ input[type="radio"] {
   .main-card .cards .card {
       margin: 20px 0 10px 0;
       width: calc(100% / 2 - 10px);
+      height: 900px;
   }
+ 
 }
 
 @media (max-width: 600px) {
@@ -498,10 +503,11 @@ input[type="radio"] {
   }
 }
 
-/* footer */
+/* ================================== footer  ==================================*/
 
 footer {
-  margin-top: 70vw;
+  position: relative;
+  top: 60rem;
   bottom: 0;
   width: auto;
   height: 60%;
@@ -521,7 +527,7 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: #f2f2f2;
+  color: #130e0e;
   margin: auto;
 }
 
@@ -576,4 +582,93 @@ footer {
   font-size: 1.6vw;
   font-family: "Poppins" , sans-serif;
   color: #f2f2f2;
+}
+
+
+
+/* media query */
+@media (max-width:1100px){
+  .container{
+    left:7%;
+  }
+}
+@media (max-width:785px){
+ 
+ .sidebar.open{
+  width: 100%;
+ }
+  .sidebar{
+    /* top: 20%; */
+    height: 19%;
+   border-radius: 10px;
+    /* position: relative; */
+    width: 50px;
+    padding: 0;
+  }
+  .sidebar li i{
+    font-size: 20px;
+  }
+  .sidebar .logo-details #btn{
+    font-size: 25px;
+  }
+  .home-section {
+    width: 100%;
+    position: static;
+    min-height: 100vh;
+  }
+  .sidebar.open ~ .home-section {
+    width: 100%;
+  }
+  .home-section .text {
+    margin: 18px 60px ;
+  }
+.hero{
+position: static;
+}
+.calendar_name{
+  font-size: 40px;
+}
+  .container{
+    position: relative;
+    top: 42rem;
+    left: 10vw;
+    width: 88%;
+    margin: 0;
+  }
+  body::before{
+    display: none;
+  }
+  .main-card .cards .card {
+    height: 280px;
+    width: 100%;
+  }
+  
+  .card .content .name {
+    font-size: 15px;
+  }
+  .card .content .job {
+    font-size: 15px;}
+    .cards .card .content .img {
+      height: 140px;
+      width: 140px;
+    }
+    
+
+    .button label {
+      background-color:rgba(0,67,86,.8) ;
+    }
+
+    footer {
+      position: relative;
+      top: 40rem;
+  }
+  .info p {
+    font-size: 3.5vw;
+}
+.footer_icon i {
+    font-size: 5.7vw;
+}
+.thankYou {
+    font-size: 4vw;
+}
 }
